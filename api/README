@@ -1,0 +1,33 @@
+app.js is for production deployment to VM, requires https
+install certbot and use namecheap domain (add A record, @, 198.IP.ADDRESS)
+Assuming using apache server
+```bash
+sudo apt update
+sudo apt install certbot python3-certbot-apache
+sudo certbot --apache -d yourdomain.com -d www.yourdomain.com
+```
+The output should be something like
+```bash
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/quokkafinancial.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/quokkafinancial.com/privkey.pem
+This certificate expires on 2025-06-08.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for quokkafinancial.com to /etc/apache2/sites-available/000-default-le-ssl.conf
+Congratulations! You have successfully enabled HTTPS on https://quokkafinancial.com
+```
+
+Put fullchain.pem and privkey.pem full path in the https server in app.js express
+
+## Running in production
+```bash
+sudo node app.js
+```
+## Local
+```bash
+node app_local.js
+```
+Local app runs on port 3000

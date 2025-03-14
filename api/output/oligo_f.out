@@ -1,0 +1,15 @@
+~~~~~~~~~~~~~~~~~Filtered output for design of antisense oligos~~~~~~~~~~~~~~~~~
+
+Column 1: target position (starting - ending)
+Column 2: target sequence (5p --> 3p)
+Column 3: antisense oligo (5p --> 3p)
+Column 4: GC content
+Column 5: oligo binding energy (kcal/mol)
+
+FILTER CRITERIA: ("<=": less than or equal to)
+
+ A) 40% <= GC % <= 60%;
+ B) Antisense oligo binding energy <= -8 kcal/mol;
+ C) No GGGG in the target sequence.
+--------------------------------------------------------------------------------
+
