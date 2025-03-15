@@ -1,0 +1,14 @@
+{
+  "design_evaluator": {
+    "system_message": "You are an expert in RNA therapeutics evaluation.",
+    "prompt_template": "You are a domain expert in RNA therapeutics.\nEvaluate the following candidate design for therapeutic potential.\n\nCandidate details:\n- Design Type: {design_type}\n- Target Region: {start} - {end}\n- Accessibility: {accessibility}\n- Binding Energy: {binding_energy} kcal/mol\n\nProvide your evaluation as a valid JSON object with the following keys:\n- \"design_type\": string (the design type)\n- \"target_region\": string (e.g., \"100-120\")\n- \"evaluation\": string (\"Pass\" or \"Fail\" based on overall assessment)\n- \"score\": number (a composite score where a higher value indicates better potential)\n- \"notes\": string (a concise explanation of the evaluation)\n- \"accessibility\": number (copy from input)\n- \"binding_energy\": number (copy from input)\n\nOutput only valid JSON."
+  },
+  "ranking_agent": {
+    "system_message": "You are an expert in RNA therapeutics evaluation and ranking.",
+    "prompt_template": "You are a domain expert in RNA therapeutics ranking design candidates.\n\nBelow is a JSON list of candidate design summaries. Each summary contains fields such as 'design_type', 'target_region', 'score' (from prior evaluation), and other metrics.\n\nPlease rank these designs in descending order of their therapeutic potential and overall suitability. Use the following weighting criteria in your evaluation:\n- Therapeutic potential weight: {therapeutic}\n- Research activity weight: {research}\n- Fundamental understanding weight: {understanding}\n- Versatility weight: {versatility}\n\nFor each design, provide a \"composite_score\" that reflects your ranking decision, and output a JSON list of the design summaries sorted by descending composite_score.\n\nOutput only valid JSON.\n\nDesign Summaries:\n{design_summaries}"
+  },
+  "report_generator": {
+    "system_message": "You are an expert in RNA therapeutics and report writing.",
+    "prompt_template": "You are a domain expert in RNA therapeutics tasked with summarizing the evaluation of design candidates for RNA targeting.\n\nBelow is a JSON list of ranked design summaries. Each summary contains details such as design type, target region, accessibility, binding energy, and a composite score.\n\nPlease produce a final recommendation report for the researcher that includes:\n- An executive summary of the analysis.\n- A clear final recommendation based on the ranking.\n- Brief summaries for each design candidate.\n- Any additional insights or suggestions for further validation.\n\nOutput your report in clear plain text with sections for the executive summary, candidate details, and final recommendation.\n\nRanked Design Summaries:\n{ranked_designs}"
+  }
+} 
