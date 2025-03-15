@@ -2,69 +2,9 @@
 
 This tool analyzes RNA structure prediction data from Sfold and evaluates design candidates for RNA targeting.
 
-## Setup
-
-1. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-2. Set your OpenAI API key as an environment variable:
-   ```
-   export OPENAI_API_KEY='your-api-key'
-   ```
-   
-   Alternatively, you can create a `.env` file in the project root with:
-   ```
-   OPENAI_API_KEY=your-api-key
-   ```
-   
-   And then load it in your code with:
-   ```python
-   from dotenv import load_dotenv
-   load_dotenv()
-   ```
-
-## Usage
-
-Run the main script from the agent directory:
-
-```
-cd agent
-python main.py
-```
-
-By default, the script will:
-1. Look for Sfold output data in `../output`
-2. If not found, it will use dummy data for demonstration
-3. Evaluate design candidates using OpenAI's API
-4. Rank the designs based on therapeutic potential
-5. Generate a recommendation report in `recommendation_report.md`
-
-## Components
-
-- `file_parser.py`: Parses Sfold output files
-- `design_evaluator.py`: Evaluates RNA design candidates using LLM
-- `ranking_agent.py`: Ranks designs based on multiple criteria
-- `report_generator.py`: Generates a final recommendation report
-- `main.py`: Orchestrates the workflow
-
-## Customization
-
-You can modify the weights used for ranking in the `RankingAgent` initialization:
-
-```python
-ranking_agent = RankingAgent(
-    weight_therapeutic=0.4,
-    weight_research=0.2,
-    weight_understanding=0.2,
-    weight_versatility=0.2
-)
-```
-
 # Sagent - Useful AI Agent for SFold
 
-[Website](https://aso-frontend.vercel.app/)
+[Website](https://sagent.bio/)
 
 ## Video Link
 https://drive.google.com/drive/folders/1tbaWjBWFPyLOUTGmsu1Eekzj33FgtDuP
@@ -132,3 +72,64 @@ In a traditional approach, it would take approximately 16.57 hours to read throu
 In contrast, using the NEAR AI Agent, this entire process can be completed in seconds. The AI agent leverages advanced natural language processing techniques to quickly sift through large volumes of text, accurately extracting and summarizing the most pertinent information. This dramatic reduction in time not only boosts productivity but also ensures more reliable and consistent results, highlighting the efficiency and power of AI in research and data analysis.
 
 Some other value adds include repository being dockerized.
+
+
+## Setup (backend tool)
+
+1. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Set your OpenAI API key as an environment variable:
+   ```
+   export OPENAI_API_KEY='your-api-key'
+   ```
+   
+   Alternatively, you can create a `.env` file in the project root with:
+   ```
+   OPENAI_API_KEY=your-api-key
+   ```
+   
+   And then load it in your code with:
+   ```python
+   from dotenv import load_dotenv
+   load_dotenv()
+   ```
+
+## Usage
+
+Run the main script from the agent directory:
+
+```
+cd agent
+python main.py
+```
+
+By default, the script will:
+1. Look for Sfold output data in `../output`
+2. If not found, it will use dummy data for demonstration
+3. Evaluate design candidates using OpenAI's API
+4. Rank the designs based on therapeutic potential
+5. Generate a recommendation report in `recommendation_report.md`
+
+## Components
+
+- `file_parser.py`: Parses Sfold output files
+- `design_evaluator.py`: Evaluates RNA design candidates using LLM
+- `ranking_agent.py`: Ranks designs based on multiple criteria
+- `report_generator.py`: Generates a final recommendation report
+- `main.py`: Orchestrates the workflow
+
+## Customization
+
+You can modify the weights used for ranking in the `RankingAgent` initialization:
+
+```python
+ranking_agent = RankingAgent(
+    weight_therapeutic=0.4,
+    weight_research=0.2,
+    weight_understanding=0.2,
+    weight_versatility=0.2
+)
+```
