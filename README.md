@@ -16,6 +16,14 @@ conda create -n useful_agent python=3.10 -y
 conda activate useful_agent
 pip install nearai
 ```
+
+## Frontend
+Go into frontend folder and run
+```bash
+npm i 
+npm run dev
+```
+
 ## Literature embeddings
 The literature on Sfold and RNA sequences is in /literature. We use xtrace to create a knowlege base in vectorstore.ipynb
 
