@@ -1,5 +1,5 @@
 # Sfold directories
-SFOLDDIR=/home/michaelwaves/repos/Sfold
+SFOLDDIR=/home/admin/repos/sagent
 SFOLDBIN=$SFOLDDIR/bin
 SFOLDLIB=$SFOLDDIR/lib
 SFOLDPAR=$SFOLDDIR/param
