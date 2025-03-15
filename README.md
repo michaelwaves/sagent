@@ -42,6 +42,9 @@ The starmir scripts for binding site prediction and ranking are in the subfolder
 These programs only run under Linux.  It is probable they could be compiled
 and run under other *nix operating systems.
 
+## Architecture
+![Architecture Image](./architecture.png)
+The project is comprised of three main parts. The dockerized SFold projet, front end interface, and NEAR agents.
 
 ## Benchmark
 ![Benchmark Image](./benchmark.png)
