@@ -16,6 +16,8 @@ conda create -n useful_agent python=3.10 -y
 conda activate useful_agent
 pip install nearai
 ```
+## Literature embeddings
+The literature on Sfold and RNA sequences is in /literature. We use xtrace to create a knowlege base in vectorstore.ipynb
 
 ## Useful Links
 
@@ -39,6 +41,7 @@ The starmir scripts for binding site prediction and ranking are in the subfolder
 
 These programs only run under Linux.  It is probable they could be compiled
 and run under other *nix operating systems.
+
 
 ## Benchmark
 ![Benchmark Image](./benchmark.png)
