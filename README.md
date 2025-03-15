@@ -42,4 +42,14 @@ The starmir scripts for binding site prediction and ranking are in the subfolder
 These programs only run under Linux.  It is probable they could be compiled
 and run under other *nix operating systems.
 
+## Architecture
+![Architecture Image](./architecture.png)
+The project is comprised of three main parts. The dockerized SFold projet, front end interface, and NEAR agents.
 
+## Benchmark
+![Benchmark Image](./benchmark.png)
+In a traditional approach, it would take approximately 16.57 hours to read through multiple papers and manually extract the relevant information. This process involves skimming, identifying key points, and analyzing content, which is time-consuming and prone to human error.
+
+In contrast, using the NEAR AI Agent, this entire process can be completed in seconds. The AI agent leverages advanced natural language processing techniques to quickly sift through large volumes of text, accurately extracting and summarizing the most pertinent information. This dramatic reduction in time not only boosts productivity but also ensures more reliable and consistent results, highlighting the efficiency and power of AI in research and data analysis.
+
+Some other value adds include repository being dockerized.
