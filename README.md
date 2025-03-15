@@ -16,7 +16,7 @@ https://app.near.ai/agents/d0c78238c3e552afe118b28fc052f92ca1b53ad5175720f6229c6
 Check out running SFOLD to run the sfold backend
 
 ## Frontend
-Go into frontend folder and run
+Go into sagent-frontend folder and run
 ```bash
 npm i 
 npm run dev
