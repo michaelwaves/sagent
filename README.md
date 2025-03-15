@@ -12,21 +12,8 @@ https://drive.google.com/drive/folders/1tbaWjBWFPyLOUTGmsu1Eekzj33FgtDuP
 ## Agent Link on NEAR HUB
 https://app.near.ai/agents/d0c78238c3e552afe118b28fc052f92ca1b53ad5175720f6229c6308548454d8/sagent/latest
 
-
-## Quickstart
-0. Have your Sagent Key in `./sagent/` as "sagent-key.pem"
-1. Install [Anaconda](https://www.anaconda.com/download/success)
-2. Based on [NEAR AI GitHub](https://github.com/nearai/nearai?tab=readme-ov-file#log-in),
-create [NEAR AI account](https://wallet.near.org/) (speaker rec Meteor)
-
-```
-chmod 400 "sagent-key.pem"
-ssh -i "sagent-key.pem" admin@ec2-18-216-25-202.us-east-2.compute.amazonaws.com
-
-conda create -n useful_agent python=3.10 -y
-conda activate useful_agent
-pip install nearai
-```
+## Sfold
+Check out running SFOLD to run the sfold backend
 
 ## Frontend
 Go into frontend folder and run
@@ -132,4 +119,22 @@ ranking_agent = RankingAgent(
     weight_understanding=0.2,
     weight_versatility=0.2
 )
+```
+
+
+## Connect to AWS and setup environment
+0. Have your Sagent Key in `./sagent/` as "sagent-key.pem"
+Checkout CONNECTING_TO_AWS and SETUP_SSL to setup remote instance 
+
+1. Install [Anaconda](https://www.anaconda.com/download/success)
+2. Based on [NEAR AI GitHub](https://github.com/nearai/nearai?tab=readme-ov-file#log-in),
+create [NEAR AI account](https://wallet.near.org/) (speaker rec Meteor)
+
+```
+chmod 400 "sagent-key.pem"
+ssh -i "sagent-key.pem" admin@ec2-18-216-25-202.us-east-2.compute.amazonaws.com
+
+conda create -n useful_agent python=3.10 -y
+conda activate useful_agent
+pip install nearai
 ```
