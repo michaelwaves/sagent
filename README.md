@@ -2,6 +2,13 @@
 
 [Website](https://aso-frontend.vercel.app/)
 
+## Video Link
+https://drive.google.com/drive/folders/1tbaWjBWFPyLOUTGmsu1Eekzj33FgtDuP
+
+## Agent Link on NEAR HUB
+https://app.near.ai/agents/d0c78238c3e552afe118b28fc052f92ca1b53ad5175720f6229c6308548454d8/sagent/latest
+
+
 ## Quickstart
 0. Have your Sagent Key in `./sagent/` as "sagent-key.pem"
 1. Install [Anaconda](https://www.anaconda.com/download/success)
