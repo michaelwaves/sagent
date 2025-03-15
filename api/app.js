@@ -5,8 +5,8 @@ var https = require('https')
 var http = require('http')
 
 //import keys, assuming you installed them with certbot
-var privateKey = fs.readFileSync('/etc/letsencrypt/live/api.sagent.bio/fullchain.pem');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/api.sagent.bio/privkey.pem');
+var privateKey = fs.readFileSync('/etc/letsencrypt/live/api.sagent.bio/privkey.pem');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/api.sagent.bio/fullchain.pem');
 
 const app = express()
 //const port = 3000
