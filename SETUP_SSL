@@ -1,0 +1,30 @@
+Step 1: Install Certbot
+Run the following commands to install Certbot, the Let’s Encrypt client:
+
+sudo apt update
+sudo apt install certbot python3-certbot-nginx -y
+Step 2: Obtain an SSL Certificate
+For NGINX:
+
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+For Apache:
+
+sudo certbot --apache -d yourdomain.com -d www.yourdomain.com
+If you're using a different web server or running a standalone server, you can use:
+
+sudo certbot certonly --standalone -d yourdomain.com -d www.yourdomain.com
+Make sure no web server is running on port 80 before running this.
+
+Step 3: Verify SSL Auto-Renewal
+Check the renewal process:
+
+sudo certbot renew --dry-run
+Certbot automatically sets up a cron job to renew certificates.
+
+Step 4: Restart Web Server
+For NGINX:
+
+sudo systemctl restart nginx
+For Apache:
+
+sudo systemctl restart apache2

@@ -1,3 +1,8 @@
+pick linux system
+
+change all files to executables in folder
+chmod -R +x /sagent 
+
 make sure sagent-key.pem is in the current directory, then ssh into instance with
 
-ssh -i "sagent-key.pem" ubuntu@ec2-3-142-174-237.us-east-2.compute.amazonaws.com
+ssh -i "sagent-key.pem" admin@ec2-18-216-25-202.us-east-2.compute.amazonaws.com

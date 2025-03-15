@@ -5,8 +5,8 @@ var https = require('https')
 var http = require('http')
 
 //import keys, assuming you installed them with certbot
-var privateKey = fs.readFileSync('/etc/letsencrypt/live/quokkafinancial.com/privkey.pem');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/quokkafinancial.com/fullchain.pem');
+var privateKey = fs.readFileSync('/etc/letsencrypt/live/api.sagent.bio/fullchain.pem');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/api.sagent.bio/privkey.pem');
 
 const app = express()
 //const port = 3000
@@ -68,7 +68,7 @@ app.get('/run:query?', (req, res) => {
     writeSequenceToFile(sequence, name)
 
     //option -i 2 runs soligo
-    exec('/home/michaelyu713705/aso-backend/bin/sfold -i 2  ./sequence.txt', (error, stdout, stderr) => {
+    exec('/home/admin/repos/sagent/bin/sfold -i 2  ./sequence.txt', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             return;
@@ -104,7 +104,7 @@ app.get('/run:query?', (req, res) => {
 
 app.get('/fetch_output/oligo', (req, res) => {
     const data = req
-    fs.readFile('/home/michaelyu713705/aso-backend/api/output/oligo.out', 'utf8', (err, data) => {
+    fs.readFile('/home/admin/repos/sagent/api/output/oligo.out', 'utf8', (err, data) => {
         const re = /\d+-.+/g;
         const rows = data.match(re);
 
