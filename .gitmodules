@@ -1,0 +1,3 @@
+[submodule "sagent-frontend"]
+	path = sagent-frontend
+	url = https://github.com/michaelwaves/sagent-frontend.git
